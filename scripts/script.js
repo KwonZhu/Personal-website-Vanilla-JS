@@ -32,3 +32,14 @@ $(document).ready(function() {
    $(".services__page").hide();
   });
 });
+//Enable Google Maps
+window.onload = function () {            
+  // LatLng is an Object for longitude and latitude
+  let latlng = new google.maps.LatLng(-34.92766, 138.5996);       
+  let myOptions = {
+    zoom: 11,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP 
+  }
+  map = new google.maps.Map(document.getElementById("map"), myOptions);
+}
